@@ -25,7 +25,6 @@ public class AppConfig {
     private Environment env;
 
     // Logger for diagnostics
-
     private Logger logger = Logger.getLogger(getClass().getName());
 
     @Bean
@@ -77,7 +76,6 @@ public class AppConfig {
 
     }
 
-
     @Bean
     public LocalSessionFactoryBean sessionFactory(){
 
@@ -102,5 +100,4 @@ public class AppConfig {
 
         return props;
     }
-    
 }
