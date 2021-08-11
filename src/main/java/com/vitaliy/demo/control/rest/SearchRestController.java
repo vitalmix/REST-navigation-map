@@ -33,4 +33,12 @@ public class SearchRestController {
         return places;
     }
 
+    @GetMapping("/historyOfSearch")
+    public List<Place> getHistoryOfSearch() {
+
+        List<Place> places = userService.getHistoryOfPlaceSearch();
+
+        return places;
+    }
+
 }
