@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
@@ -19,6 +20,7 @@ import java.util.logging.Logger;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.vitaliy.demo")
+@PropertySource("classpath:persistence-mysql.properties")
 public class AppConfig {
 
     @Autowired
