@@ -5,7 +5,7 @@
     <title>Place search</title>
 </head>
     <header>
-            <form class="search-form" action="${pageContext.request.contextPath}/api/searchCity">
+            <form class="search-form" action="${pageContext.request.contextPath}/api/searchPlace">
 
                 <p>Search your place: </p>
                 <input type="text" placeholder="Search address" name="searchedPlace">
