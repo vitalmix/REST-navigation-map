@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.vitaliy.demo")
+@ComponentScan(basePackages = "com.vitaliy.demo")
 @PropertySource("classpath:persistence-mysql.properties")
 public class AppConfig {
 

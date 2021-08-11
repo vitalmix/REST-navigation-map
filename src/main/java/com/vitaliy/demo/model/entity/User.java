@@ -37,6 +37,12 @@ public class User {
 
     }
 
+    public User(String username, String password, int enabled) {
+        this.username = username;
+        this.password = password;
+        this.enabled = enabled;
+    }
+
     public List<Place> getPlaces() {
         return places;
     }
@@ -53,12 +59,6 @@ public class User {
 
         places.add(place);
 
-    }
-
-    public User(String username, String password, int enabled) {
-        this.username = username;
-        this.password = password;
-        this.enabled = enabled;
     }
 
     public String getUsername() {
