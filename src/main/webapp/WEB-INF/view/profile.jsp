@@ -5,10 +5,10 @@
     <title>Home</title>
 </head>
 <body>
-   <h2>Challenge home page</h2>
+   <h2>Overonix Challenge home page</h2>
    <hr>
 
-   <p>Welcome to challenge home page</p>
+   <p>Welcome to Overonix challenge home page</p>
    <hr>
 
    <p>
