@@ -1,5 +1,6 @@
-package com.vitaliy.demo.model.dao;
+package com.vitaliy.demo.model.dao.impl;
 
+import com.vitaliy.demo.model.dao.UserDAO;
 import com.vitaliy.demo.model.entity.Place;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
