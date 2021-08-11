@@ -18,6 +18,11 @@
        Role(s): <security:authentication property="principal.authorities" />
    </p>
 
+   <hr>
+   <p>
+       <a href="${pageContext.request.contextPath}/search">Search addresses</a>
+   </p>
+
    <from:form action="${pageContext.request.contextPath}/logout" method="POST">
 
        <input type="submit" value="logout">
