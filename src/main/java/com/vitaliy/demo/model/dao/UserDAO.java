@@ -13,4 +13,5 @@ public interface UserDAO {
 
     public User getCurrentLoggedUser();
 
+    public void saveSearchedPlace(Place place);
 }

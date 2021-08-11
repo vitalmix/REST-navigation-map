@@ -31,4 +31,10 @@ public class UserServiceImpl implements UserService {
     public User getCurrentLoggedUser() {
         return userDAO.getCurrentLoggedUser();
     }
+
+    @Override
+    @Transactional
+    public void saveSearchedPlace(Place place) {
+        userDAO.saveSearchedPlace(place);
+    }
 }

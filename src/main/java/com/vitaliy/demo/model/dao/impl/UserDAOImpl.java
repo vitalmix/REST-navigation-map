@@ -70,4 +70,20 @@ public class UserDAOImpl implements UserDAO {
 
         return null;
     }
+
+    @Override
+    public void saveSearchedPlace(Place place) {
+
+        User user = getCurrentLoggedUser();
+
+        user.addPlace(place);
+
+        place.setUser(user);
+
+        place.setUsername(user.getUsername());
+
+        Session session = sessionFactory.getCurrentSession();
+
+        session.save(place);
+    }
 }

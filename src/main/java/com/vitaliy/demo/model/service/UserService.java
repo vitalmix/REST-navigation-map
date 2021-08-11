@@ -12,4 +12,6 @@ public interface UserService {
     public String getCurrentLoggedUsername();
 
     public User getCurrentLoggedUser();
+
+    public void saveSearchedPlace(Place place);
 }
