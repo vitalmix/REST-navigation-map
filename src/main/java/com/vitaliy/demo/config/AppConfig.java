@@ -10,6 +10,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
@@ -21,7 +23,7 @@ import java.util.logging.Logger;
 @EnableWebMvc
 @ComponentScan(basePackages = "com.vitaliy.demo")
 @PropertySource("classpath:persistence-mysql.properties")
-public class AppConfig {
+public class AppConfig implements WebMvcConfigurer {
 
     @Autowired
     private Environment env;
@@ -38,6 +40,12 @@ public class AppConfig {
         viewResolver.setSuffix(".jsp");
 
         return viewResolver;
+    }
+
+    //redirect to search
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addRedirectViewController("/", "/search");
     }
 
     //set JDBC properties
