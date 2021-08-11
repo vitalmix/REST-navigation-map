@@ -14,4 +14,6 @@ public interface UserDAO {
     public User getCurrentLoggedUser();
 
     public void saveSearchedPlace(Place place);
+
+    public List<Place> getHistoryOfPlaceSearch();
 }

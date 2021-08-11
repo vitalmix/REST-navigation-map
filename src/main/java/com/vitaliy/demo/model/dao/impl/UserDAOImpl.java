@@ -1,5 +1,6 @@
 package com.vitaliy.demo.model.dao.impl;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.vitaliy.demo.model.dao.UserDAO;
 import com.vitaliy.demo.model.entity.Place;
 import com.vitaliy.demo.model.entity.User;
@@ -85,5 +86,29 @@ public class UserDAOImpl implements UserDAO {
         Session session = sessionFactory.getCurrentSession();
 
         session.save(place);
+    }
+
+    @Override
+    public List<Place> getHistoryOfPlaceSearch() {
+        User user = getCurrentLoggedUser();
+
+        for (Place p :
+                user.getPlaces()) {
+            p.setAddress(getAddressByCoordinates(p));
+        }
+
+        return user.getPlaces();
+    }
+
+    public JsonNode getAddressByCoordinates(Place place) {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        String url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat="
+                + place.getLat() + "&lon=" + place.getLon();
+
+        place = restTemplate.getForObject(url, Place.class);
+
+        return place.getAddress();
     }
 }

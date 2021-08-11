@@ -37,4 +37,10 @@ public class UserServiceImpl implements UserService {
     public void saveSearchedPlace(Place place) {
         userDAO.saveSearchedPlace(place);
     }
+
+    @Override
+    @Transactional
+    public List<Place> getHistoryOfPlaceSearch() {
+        return userDAO.getHistoryOfPlaceSearch();
+    }
 }
