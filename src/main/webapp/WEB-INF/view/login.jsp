@@ -34,7 +34,7 @@
         <input type="submit" value="Login">
     </from:form>
 
-<a href="${pageContext.request.contextPath}/app/search">Back to search</a>
+<a href="${pageContext.request.contextPath}/search">Back to search</a>
 
 </body>
 </html>
