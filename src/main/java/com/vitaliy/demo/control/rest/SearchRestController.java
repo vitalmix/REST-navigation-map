@@ -22,6 +22,14 @@ public class SearchRestController {
 
         List<Place> places = userService.searchPlaces(searchedPlace);
 
+        if (!userService.getCurrentLoggedUsername().equals("anonymousUser")) {
+
+            for (Place p :
+                    places) {
+                userService.saveSearchedPlace(p);
+            }
+        }
+
         return places;
     }
 
