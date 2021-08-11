@@ -1,16 +1,15 @@
 package com.vitaliy.demo.model.dao;
 
 import com.vitaliy.demo.model.entity.Place;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@Service
+@Repository
 public class UserDAOImpl implements UserDAO {
 
     @Override
