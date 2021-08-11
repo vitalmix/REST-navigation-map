@@ -27,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/profile/**").hasRole("REGISTERED")
+                .antMatchers("/api/historyOfSearch").hasRole("REGISTERED")
                 .and()
                 .formLogin()
                 .loginPage("/login")
